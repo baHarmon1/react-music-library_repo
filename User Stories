@@ -7,7 +7,7 @@ Total points: /50 -->
 ## (5 points): As a developer, I want to make at least 10 good, consistent commits.
 ## (5 points): As a developer, I want to use the Create-React-App command to create my React project.
 ## (10 points) As a developer, I want to use AXIOS on the frontend to consume my Music Library Django REST API.
-(10 points) As a developer, I want to display the data (song title, album, artist, genre, and release date) from the API within a table on the frontend.
+## (10 points) As a developer, I want to display the data (song title, album, artist, genre, and release date) from the API within a table on the frontend.
 (5 points) As a developer, I want to create a delete button for each row on my table that will make a DELETE request to my backend API for that song object.
 (10 points) As a developer, I want to create a form on a stateful component that allows me to POST a new song to my backend API.
 (5 points): As a developer, I want to create a minimum of three React components and use them within my React application. (EX: SongForm, SearchBar, MusicTable)
