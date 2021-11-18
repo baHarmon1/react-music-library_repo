@@ -33,26 +33,22 @@ class App extends Component {
   //   });
   // };
 
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  // };
+  handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
-  // deleteRow(indexOfTR) {
-  //   try {
-  //     await axios.delete();
-  //   } catch (ex) {
-  //     console.log("Error in API call!");
-  //   }
-  // }
-
-  test = (someIndex) => {
-    alert(`This is a test on ${someIndex}!`)
+   async deleteRow(PKey) {
+    try {
+      await axios.delete('http://127.0.0.1:8000/music/' + PKey + "/");
+    } catch (ex) {
+      console.log("Error in API call!");
+    }
   }
 
   render() {
     return (
       <div>
-        <MusicLibraryTable table={this.state.table} test={this.test} />
+        <MusicLibraryTable table={this.state.table} deleteRow={this.deleteRow} />
         <CreateSong />
         <h1>Test from App</h1>
       </div>

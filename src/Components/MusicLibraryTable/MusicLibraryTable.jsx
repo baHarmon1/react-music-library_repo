@@ -22,14 +22,14 @@ const MusicLibraryTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.table.map((e, i) => (
-            <tr key={i}>
+          {props.table.map((e) => (
+            <tr>
               <td>{e.title}</td>
               <td>{e.artist}</td>
               <td>{e.album}</td>
               <td>{e.genre}</td>
               <td>{e.release_date}</td>
-              <td><button onClick={() => {props.test(i)}}>Delete</button></td>
+              <td><button onClick={() => {props.deleteRow(e.id)}}>Delete</button></td>
             </tr>
           ))}
         </tbody>
