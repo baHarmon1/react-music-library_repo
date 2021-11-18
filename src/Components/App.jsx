@@ -27,27 +27,32 @@ class App extends Component {
     }
   }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
+  // handleChange = (event) => {
+  //   this.setState({
+  //     [event.target.name]: event.target.value,
+  //   });
+  // };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-  };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  // };
 
-  deleteRow(event) {
-    try {
-      await axios.delete(event.target);
-    } catch (ex) {
-      console.log("Error in API call!");
-    }
+  // deleteRow(indexOfTR) {
+  //   try {
+  //     await axios.delete();
+  //   } catch (ex) {
+  //     console.log("Error in API call!");
+  //   }
+  // }
+
+  test = (someIndex) => {
+    alert(`This is a test on ${someIndex}!`)
   }
+
   render() {
     return (
       <div>
-        <MusicLibraryTable table={this.state.table} />
+        <MusicLibraryTable table={this.state.table} test={this.test} />
         <CreateSong />
         <h1>Test from App</h1>
       </div>
