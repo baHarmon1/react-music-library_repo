@@ -27,16 +27,6 @@ class App extends Component {
     }
   }
 
-  // handleChange = (event) => {
-  //   this.setState({
-  //     [event.target.name]: event.target.value,
-  //   });
-  // };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
    async deleteRow(PKey) {
     try {
       await axios.delete('http://127.0.0.1:8000/music/' + PKey + "/");
@@ -50,7 +40,6 @@ class App extends Component {
       <div>
         <MusicLibraryTable table={this.state.table} deleteRow={this.deleteRow} />
         <CreateSong />
-        <h1>Test from App</h1>
       </div>
     );
   }

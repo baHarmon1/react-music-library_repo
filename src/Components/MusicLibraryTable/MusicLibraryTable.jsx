@@ -4,13 +4,7 @@ import axios from "axios";
 const MusicLibraryTable = (props) => {
   return (
     <div>
-      {/* {props.table[1] ? <h1>{props.table[1].title}</h1> : null} */}
-      <ul>
-        {props.table.map((element, i) => (
-          <li key={i}>{element.title}</li>
-        ))}
-      </ul>
-      <table class="table table-dark">
+      <table className="table table-dark">
         <thead>
           <tr>
             <td>Title</td>
@@ -18,7 +12,7 @@ const MusicLibraryTable = (props) => {
             <td>Album</td>
             <td>Genre</td>
             <td>Release Date</td>
-            <td>  </td>
+            <td> </td>
           </tr>
         </thead>
         <tbody>
@@ -29,7 +23,15 @@ const MusicLibraryTable = (props) => {
               <td>{e.album}</td>
               <td>{e.genre}</td>
               <td>{e.release_date}</td>
-              <td><button onClick={() => {props.deleteRow(e.id)}}>Delete</button></td>
+              <td>
+                <button
+                  onClick={() => {
+                    props.deleteRow(e.id);
+                  }}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
