@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import CreateSong from "./CreateSong/CreateSong";
 import MusicLibraryTable from "./MusicLibraryTable/MusicLibraryTable";
+import SearchBar from "./SearchBar/SearchBar";
 
 class App extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <SearchBar />
         <MusicLibraryTable table={this.state.table} deleteRow={this.deleteRow} />
         <CreateSong />
       </div>

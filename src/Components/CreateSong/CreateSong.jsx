@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { Component } from "react";
-
 class CreateSong extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +12,7 @@ class CreateSong extends Component {
     };
   }
 
-  async createASong() {
+  async createASong() { // Consider moving to App.jsx and pass down props
     try {
       await axios
         .post("http://127.0.0.1:8000/music/", this.state)
@@ -22,6 +21,7 @@ class CreateSong extends Component {
       console.log("Error in API call!");
     }
   }
+  
   handleSubmit = (event) => {
     event.preventDefault();
     this.createASong();

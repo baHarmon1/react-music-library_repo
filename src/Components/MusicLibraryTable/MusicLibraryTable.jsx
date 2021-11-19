@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 const MusicLibraryTable = (props) => {
   return (
@@ -16,15 +15,15 @@ const MusicLibraryTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.table.map((e) => (
-            <tr>
+          {props.table.map((e, i) => (
+            <tr key={i}>
               <td>{e.title}</td>
               <td>{e.artist}</td>
               <td>{e.album}</td>
               <td>{e.genre}</td>
               <td>{e.release_date}</td>
               <td>
-                <button
+                <button // Consider moving functionality to an alert to confirm the deletion of a song.
                   onClick={() => {
                     props.deleteRow(e.id);
                   }}
